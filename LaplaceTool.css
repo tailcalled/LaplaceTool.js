@@ -1,0 +1,70 @@
+h1 {
+	background-color: #7070FF;
+	color: #FFFFFF;
+	padding: 0px 10px 0px 10px;
+}
+div.column {
+	display: inline-block;
+	width: 295px;
+	vertical-align: top;
+}
+div.label, div.data {
+	width: 145px;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+div.data {
+	text-align: right;
+}
+div.filler {
+	height: 12pt;
+}
+input {
+	width: 145;
+	text-align: right;
+}
+input.tab {
+	display: none;
+}
+label.tab {
+	background-color: #F0F0F0;
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding: 3px 3px 0px 3px;
+}
+input.tab:checked + label.tab {
+	background-color: #E0E0FF;
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+div.tab {
+	width: 295px;
+	background-color: #E0E0FF;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 0;
+}
+canvas {
+	width: 289px;
+	height: 200px;
+	border: 1px solid gray;
+	margin: 2px;
+	background-color: white;
+}
+
+body {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+noscript {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 18;
+	text-align: center;
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	display: block;
+}

@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="LaplaceTool.css">
+		<script src="LaplaceTool.js"></script>
+	</head>
+	<body onload="fillFields(); updateGraph()">
+		<h1>Laplace Tool</h1>
+		<noscript>
+			You currently have Javascript disabled, but this site requires Javascript.
+			As a result, the page will work differently than intended. You can solve
+			this problem by enabling Javascript in your browser.
+		</noscript>
+		<p>This tool is a quick way to use Laplace's Law of Succession and related math.</p>
+		<div class="column">
+			<div class="label">Successes:</div>
+			<input type="text" value="5" id="successes" onchange="updateGraph()">
+			<div class="label">Failures:</div>
+			<input type="text" value="8" id="failures" onchange="updateGraph()">
+			<div class="label">Expected Rate:</div>
+			<div class="data" id="expected">NaN</div>
+			<div class="filler"></div>
+			<div class="label">Confidence:</div>
+			<input type="text" value="95" id="confidence" onchange="updateGraph()">
+			<div class="label">Lower Bound:</div>
+			<div class="data" id="lower">NaN%</div>
+			<div class="label">Upper Bound:</div>
+			<div class="data" id="upper">NaN%</div>
+		</div>
+		<div class="column">
+			<input type="radio" class="tab" value="pdf" name="tab" id="pdf" checked onchange="updateGraph()">
+			<label class="tab" for="pdf">PDF</label>
+			<input type="radio" class="tab" value="cdf" name="tab" id="cdf" onchange="updateGraph()">
+			<label class="tab" for="cdf">CDF</label>
+			<div class="tab">
+				<canvas id="graph" width="289" height="200">
+				</canvas>
+			</div>
+		</div>
+		<p>
+			What is this? Basically, Laplace's Law of Succession tells you what you know
+			after a survey. Imagine you have some population, and you want to know how
+			many people in this population belongs to some subset.
+		</p>
+		<p>
+			It can be any subset - red hair, rich, parents, whatever. Laplace's Law of
+			Succession assumes you know nothing about the subset beforehand.
+		</p>
+		<p>
+			To find out how many are in the subset, you obviously go out and measure.
+			However, it would be too expensive to measure everybody, so instead you
+			only measure a small sample. This obviously doesn't give you perfect information,
+			but it does tell you something.
+		</p>
+		<p>
+			To find out <i>what exactly</i> you know, this tool becomes useful: simply
+			enter the results of your survey, and it can give you the probability of
+			a given rate of members in the subset. In addition, you can also specify
+			some probability that you can accept to make mistakes, and it will tell
+			you an interval that with this probability contains the actual rate.
+		</p>
+	</body>
+</html>
