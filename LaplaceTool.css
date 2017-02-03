@@ -3,25 +3,18 @@ h1 {
 	color: #FFFFFF;
 	padding: 0px 10px 0px 10px;
 }
-div.column {
-	display: inline-block;
-	width: 295px;
-	vertical-align: top;
-}
-div.label, div.data {
-	width: 145px;
+div.label {
+	width: 100%;
 	display: inline-block;
 	margin-bottom: 5px;
 }
-div.data {
+div.data, input {
+	float: right;
 	text-align: right;
+	max-width: 145px;
 }
 div.filler {
 	height: 12pt;
-}
-input {
-	width: 145;
-	text-align: right;
 }
 input.tab {
 	display: none;
@@ -35,7 +28,7 @@ label.tab {
 input.tab:checked + label.tab {
 	background-color: #E0E0FF;
 	font-weight: bold;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
 }
 div.tab {
 	width: 295px;
@@ -53,9 +46,16 @@ canvas {
 }
 
 body {
-	width: 600px;
+	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
+}
+div.columns {
+	display: flex;
+}
+div.column {
+	vertical-align: top;
+	margin: 2px;
 }
 
 noscript {
